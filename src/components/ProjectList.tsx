@@ -21,7 +21,7 @@ export default async function ProjectList({ projects }: ProjectListProps) {
           <div className="flex flex-col md:flex-row">
             <div className="flex items-center justify-center">
               <Link href={`/projects/${project.id}`}>
-                <Image src={project.imageUrl ?? "/project.jpg"} width={300} height={300} alt="" className="rounded-md m-2" />
+                <Image src={project.imageUrl ?? "/project.jpg"} width={300} height={300} alt="" className="rounded-md m-2 h-200px w-300px" />
               </Link>
             </div>
             <div className="m-4 flex-1  text-center md:text-left">
