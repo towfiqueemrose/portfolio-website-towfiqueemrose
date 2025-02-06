@@ -28,9 +28,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.style} ${lato.style} my-2 mx-16 bg-[#0b1125] antialiased`}      >
+        className={`${geistSans.style} ${lato.style} my-2 bg-[#0b1125] antialiased`}>
+        <div className=" mx-16">
         <Navbar />
-        {children}
+          {children}
+        </div>
       </body>
     </html>
   );
