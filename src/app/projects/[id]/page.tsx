@@ -30,7 +30,18 @@ export default async function SingleProjectPage({ params }: { params: Promise<{ 
               className="rounded-lg"
             />
           </div>
-          <div className="flex gap-4 justify-evenly">
+
+        </div>
+        <div className="ml-0 xl:ml-16 flex gap-8 xl:w-1/2">
+          <div>
+            <h1 className="hidden xl:block text-5xl font-bold text-white mb-4">
+              {singleProject.title}
+            </h1>
+            <p className="text-white my-6 text-lg md:text-xl">{singleProject.longDesc}</p>
+            {singleProject.essentialInfo && (
+              <p className="text-red-500 my-6 text-base md:text-lg">{"**"} {singleProject.essentialInfo}</p>
+            )}
+                      <div className="flex gap-4 justify-evenly">
             {singleProject.deployedLink && (
               <a
                 href={singleProject.deployedLink}
@@ -52,16 +63,6 @@ export default async function SingleProjectPage({ params }: { params: Promise<{ 
               </a>
             )}
           </div>
-        </div>
-        <div className="ml-0 xl:ml-16 flex gap-8 xl:w-1/2">
-          <div>
-            <h1 className="hidden xl:block text-5xl font-bold text-white mb-4">
-              {singleProject.title}
-            </h1>
-            <p className="text-white my-6 text-lg md:text-xl">{singleProject.longDesc}</p>
-            {singleProject.essentialInfo && (
-              <p className="text-red-500 my-6 text-base md:text-lg">{"**"} {singleProject.essentialInfo}</p>
-            )}
           </div>
         </div>
       </div>
